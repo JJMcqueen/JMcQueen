@@ -1,0 +1,267 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Flexbox</title>
+    </head>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(70, 70, 70);
+        padding: 15px;
+        
+      }
+
+      .nav-flex {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        height: 50px;
+        align-items: center;
+        position: static;
+        
+      }
+      .nav:nth-child(1) {background-color: lightcoral;}
+      .nav:nth-child(2) {background-color: aqua;}
+      .nav:nth-child(3) {background-color: brown; width: 37%;}
+      .nav:nth-child(4) {background-color: lightpink;}
+      .nav:nth-child(5) {background-color: lightslategrey;}
+      .nav {
+        width: 15%;
+        height: 40px;
+        text-align: center;
+        align-items: center;
+        
+                
+      }
+
+      button {
+        font-weight: bold;
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 15px;
+      }
+      
+      button:hover {
+        cursor: pointer;
+        color: grey;
+        transition: 170ms;
+
+      }
+      button:active {
+        color: blue;
+      }
+
+      /*input*/
+      .flexbox {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .first-box:nth-child(1) {background-color: rgb(76, 236, 103);}
+      .first-box:nth-child(3) {background-color: rgb(112, 236, 236);}
+      .first-box {
+        width: 24%;
+        padding: 20px 10px;
+      }
+      h3 {
+        text-align: center;
+        margin-bottom: 5px;
+        color: #fff;
+      }
+      .box-one {
+        text-align: center;
+        flex-direction: column;
+        width: 625px;
+        height: 120px;
+        background-color: rgb(156, 130, 140);
+        
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+      .Name {
+        margin-bottom: 10px;
+      }
+      .text-box {
+        width: 300px;
+        height: 25px;
+        border: none;
+        padding-left: 10px;
+        
+      }
+      .sign-in {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 1.5px solid #fff;
+        width: 150px;
+        font-size: 1rem;
+        text-align: center;
+        background-color: hotpink;
+        border-radius: 1rem;
+      }
+      .sign-in:hover {
+        background-color: lightblue;
+        transition: 270ms;
+      }
+
+      
+      /*container*/
+      .container {
+        padding: 20px 50px; 
+        display: flex;
+        justify-content: space-between;
+        
+      }
+
+      .main {        
+        width: 50%;
+        text-align: justify;
+        padding: 10px;
+        background-color: lightpink;
+
+      }
+
+      .side-one,
+      .side-two {
+        width: 20%;
+        background-color: lightblue;
+        border-radius: 30px;
+        padding: 10px;
+        line-height: 1.2;       
+      }
+
+
+
+      .Feature:nth-child(1) {background-color: rgb(140, 189, 206);}
+      .Feature:nth-child(2) {background-color: rgb(112, 233, 112);}
+      .Feature:nth-child(3) {background-color: rgb(184, 139, 184);}
+      .display-flex {
+        margin: 40px auto auto;
+        display: flex;
+        justify-content: space-between;
+   
+      }
+      .Feature {
+      
+        padding: 10px;
+        width: 30%;
+      }
+    </style>
+    <body>
+      <header>
+        <nav class="nav-flex">
+          <div class="nav"><button>Home</button></div>
+          <div class="nav"><button>About Me</button></div>
+          <div class="nav"><button>Contact</button></div>
+          <div class="nav"><button>Our Goal</button></div>
+          <div class="nav"><button>Payment</button></div>
+        </nav>
+      </header>
+
+      <div class="flexbox">
+        <div class="first-box">
+         <h3>First-box</h3> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse harum eius id! Voluptatem
+           magni omnis dolorem numquam corporis nemo, ut rem non placeat totam vel. Dolorum voluptatum voluptas incidunt ut 
+           minima, rerum veritatis magni quaerat necessitatibus 
+          tenetur sint optio magnam distinctio similique delectus repudiandae accusamus maxime itaque eius expedita ullam.</div>
+        <div class="box-one">
+          <div class="Name">
+            <input class="text-box" type="text" placeholder="Email" />
+          </div>
+          <div class="text">
+            <input class="text-box" type="password" placeholder="Type Password" />
+          </div>
+          <button class="sign-in">Log in</button> <button class="sign-in">Sign up</button><br>
+          <div><input type="checkbox"> Remember Password</div>
+        </div>
+        <div class="first-box">
+         <h3>Last-box</h3> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime minima et 
+          commodi culpa molestias obcaecati ullam quod vitae sunt impedit voluptas autem totam, r
+          epellendus qui reprehenderit! Recusandae vitae consequuntur magni fugit esse provident 
+          harum debitis illo ratione facere quo repudiandae, est voluptas, dolorem unde temporibus
+           quisquam voluptate odio sequi error.</div>
+      </div>
+
+
+
+      <div class="container">
+        <div class="side-one">
+          <h2>Sidebar One</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+            reprehenderit suscipit alias nisi, aliquam esse minus distinctio earum
+            quam porro!
+          </p>
+        </div>
+
+        <div class="main">
+          <h2>Main Column</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+            accusamus quo perspiciatis eaque iusto? Ab consequatur temporibus
+            nostrum saepe numquam nobis eius, eligendi ad, sapiente perferendis,
+            repudiandae perspiciatis rem? Dolorem,<p>
+            dicta? Magni dignissimos tenetur, obcaecati numquam cum adipisci
+            voluptas consequuntur facere harum accusantium doloribus dolor dolores
+            rerum velit, veritatis, sed officiis laborum nihil quidem. Deleniti
+            quod corrupti doloribus obcaecati rem voluptatum, quia undebr
+          </p>
+            nam perferendis magnam eos maiores sequi reprehenderit similique quam,
+            suscipit neque, adipisci amet exercitationem assumenda enim Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Voluptatem odio
+            natus animi, dolorum omnis debitis laborum aperiam, nemo dolorem
+            repellendus reprehenderit quidem facilis dolor, totam autem cupiditate
+            itaque dolores vitae maiores eaque provident temporibus fuga! Eaque
+            officiis sapiente tempore. Dignissimos reprehenderit, quia praesentium
+            repellendus asperiores assumenda eos aspernatur illum ullam.
+            <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse,
+            commodi adipisci consectetur dolore id necessitatibus iste distinctio
+            est neque reprehenderit? Aspernatur fuga eveniet odit inventore quam
+            non ipsa ducimus omnis nemo consequuntur distinctio est voluptatem
+            doloremque, rerum impedit consequatur et? Neque a assumenda quod
+            deserunt itaque sapiente magnam aliquid facilis! necessitatibus.</p>
+          </p>
+        </div>
+        <div class="side-two">
+          <h2>Sidebar Two</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+            voluptas totam explicabo officia odit quod ut enim nobis amet sed.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="display-flex">
+        <div class="Feature">
+          <h5>
+            Feature 1
+          </h5>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga dicta, 
+            recusandae ullam laudantium modi  
+            ratione quos magni, eos eum placeat sed repellat tempora suscipit.</p>
+        </div>
+
+        <div class="Feature">
+          <h5>Feature 2</h5>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, 
+            tempore in numqu aliquam quaerat culpa. Similique temporibus, 
+            exercitationem, nulla error consequatur officiis veniam iste suscipit repellat quo facilis?</p>
+        </div>
+        <div class="Feature">
+          <h5>Feature 3</h5>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum soluta, impedit veritatis ea voluptatem
+            temporibus itaquer
+            dolores, perspiciatis dolorum a quas repellat repudiandae ipsa quo tenetur cupiditate.</p>
+        </div>
+      </div>
+    </body>
+  </html>
